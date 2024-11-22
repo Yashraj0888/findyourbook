@@ -71,13 +71,6 @@ const SearchForm = () => {
               <input
                 type="text"
                 className='form-control'
-                placeholder='Publish Year (e.g., 1912)'
-                value={year}
-                onChange={(e) => setYear(e.target.value)}
-              />
-              <input
-                type="text"
-                className='form-control'
                 placeholder='Genre (e.g., Adventure)'
                 value={subject}
                 onChange={(e) => setSubject(e.target.value)}
