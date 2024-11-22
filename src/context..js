@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect, useCallback } from 'react';
 
 // Base URL for the Open Library API
-const BASE_URL = "http://openlibrary.org/search.json";
+const BASE_URL = "https://openlibrary.org/search.json";
 const AppContext = React.createContext();
 
 // App Provider component to manage global state
