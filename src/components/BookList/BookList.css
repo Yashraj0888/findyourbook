@@ -76,10 +76,18 @@
   }
   
   .pagination .current-page {
-    font-size: 18px;
+    font-size: 15px;
+   
     color: #333;
     margin: 0 10px;
     font-weight: bold;
+  }
+  .current-page{
+    width: 100%;
+    display: flex;
+    font-weight: 100;
+    align-items: center;
+    justify-content: center;
   }
   
   .pagination .current-page span {
