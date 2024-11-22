@@ -18,7 +18,8 @@ const Navbar = () => {
           </Link>
           <button type = "button" className='navbar-toggler-btn' onClick={handleNavbar}>
             <HiOutlineMenuAlt3 size = {35} style = {{
-              color: `${toggleMenu ? "#fff" : "#010101"}`
+              color: `${toggleMenu ? "#fff" : "#010101"}
+              `
             }} />
           </button>
         </div>

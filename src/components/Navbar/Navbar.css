@@ -16,6 +16,7 @@
     width: 100%;
 }
 .navbar-toggler-btn{
+    width: 15%;
     transition: var(--transition);
     z-index: 11;
 }
