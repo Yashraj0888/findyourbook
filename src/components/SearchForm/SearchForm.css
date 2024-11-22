@@ -1,0 +1,117 @@
+/* Center the entire form in the middle of the screen */
+
+
+  
+  .search-form-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .result-title-container {
+    text-align: center;  /* Center the title */
+    margin-top: 20px;
+    
+    padding: 10px;
+  }
+  
+  .result-title {
+    font-size: 24px; /* Set the font size */
+    font-weight: bold; /* Set the font weight */
+    color: #333; /* Set text color */ /* Optional: capitalize the text */
+    letter-spacing: 2px; /* Optional: increase letter spacing */
+    transition: color 0.3s ease;
+     /* Smooth color transition */
+     color: red;
+  }
+  
+  .result-title-container h1 {
+    color: #ff6347; /* Example: Change color when there's a search result */
+  }
+  
+  .search-form-content p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 25px;
+  }
+  
+  /* Form layout */
+  .search-form {
+    width: 100%;
+  }
+  
+  .search-form-elem {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: transparent;
+  }
+  
+  .form-control {
+    padding: 12px 15px;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    width: 250px;
+    color: black;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #6c5ce7;
+    outline: none;
+    box-shadow: 0 0 5px rgba(108, 92, 231, 0.4);
+  }
+  
+  .form-control::placeholder {
+    color: #bbb;
+  }
+  
+  /* Button styling */
+  button {
+    background-color: #6c5ce7;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #5a4fe3;
+    transform: translateY(-2px);
+  }
+  
+  button:active {
+    transform: translateY(0);
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  /* Icon styling */
+  button .text-purple {
+    color: white;
+  }
+  
+  /* Responsive styles for mobile */
+  @media (max-width: 768px) {
+    .search-form-elem {
+      flex-direction: column;
+    }
+  
+    .form-control {
+      width: 100%;
+      margin-bottom: 12px;
+    }
+  
+    button {
+      width: 100%;
+      padding: 12px;
+    }
+  }
+  
