@@ -33,7 +33,7 @@ The project addresses common challenges faced by book readers:
 
 ## Key Features ⭐
 
-- **Book Search**: Search books by title, author name, and genre 🔍
+- **Book Search**: Search books by title, author name and genre. Also check for E-Book availability 🔍
 - **Pagination**: Better content organization with pagination 📑
 - **Local Storage**: Faster loading with previously visited pages 💾
 - **Responsive Design**: Optimized for mobile, tablet, and desktop 📱
