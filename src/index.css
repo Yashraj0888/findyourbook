@@ -294,7 +294,7 @@ html {
 /* Text selection styling */
 ::selection {
   background-color: #615d5d; /* Gray background on selection */
-  color: rgba(141, 134, 134, 0.745); /* White text on selection */
+  color: rgba(255, 255, 255, 0.745); /* White text on selection */
 }
 /* Styling for the scrollbar */
 ::-webkit-scrollbar {
