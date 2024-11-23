@@ -99,6 +99,7 @@
         padding: 0 6rem 0 2rem; /* Add padding for better spacing on larger screens */
     }
     
+    
     .book-details-img img {
         max-width: 100%; /* Ensure images fit within the container */
     }
