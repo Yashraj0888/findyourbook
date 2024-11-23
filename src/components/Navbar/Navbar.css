@@ -1,168 +1,74 @@
-/* General Navbar Styling */
-.navbar {
-    width: 100%;
-    padding: 1.5rem 1rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
-        rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-    background-color: #ffffff;
-    position: fixed; /* Fixed to top */
-    top: 0;
-    z-index: 1000;
+.navbar{
+    padding: 1.8rem 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
-
-/* Navbar Content */
-.navbar-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+.navbar-brand{
+    width: 90px;
 }
-
-/* Brand and Toggler Section */
-.brand-and-toggler {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.navbar-brand span{
+    margin-left: 2rem;
+}
+.brand-and-toggler{
     width: 100%;
 }
-
-.navbar-brand {
+.navbar-content{
     display: flex;
-    align-items: center;
-    gap: 0.8rem; /* Space between logo and text */
+    width: 100%;
 }
-
-.navbar-brand img {
-    width: 60px; /* Adjust logo size */
-    height: auto;
-    transition: transform 0.3s ease, filter 0.3s ease; /* Add smooth transition for transform */
+.navbar-toggler-btn{
+    transition: var(--transition);
+    z-index: 11;
 }
-
-.navbar-brand span {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #333;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: transform 0.3s ease, color 0.3s ease; /* Add smooth transition for transform and color */
-}
-
-.navbar-brand:hover img {
-    transform: scale(1.1); /* Slightly enlarge the logo */
-    filter: brightness(1.2); /* Make the logo brighter on hover */
-}
-
-.navbar-brand:hover span {
-    transform: translateY(-5px); /* Move the text upwards */
-    color: #1c1c1c; /* Change the text color on hover */
-}
-
-
-/* Navbar Toggler */
-.navbar-toggler-btn {
-    background-color: #f0f0f0;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.navbar-toggler-btn:hover {
-    background-color: #ddd;
-}
-
-.navbar-toggler-btn img {
-    width: 25px;
-    height: auto;
-}
-
-/* Navbar Collapse (Mobile View) */
-.navbar-collapse {
+.navbar-collapse{
     position: fixed;
-    top: 0;
     right: 0;
+    top: 0;
+    z-index: 10;
+    background-color: var(--black-color);
     height: 100%;
     width: 280px;
-    background-color: #333;
-    padding: 6rem 2rem 2rem;
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in-out;
-    z-index: 999;
+    padding: 10rem 3rem 0 3rem;
+    transform: translatex(100%);
+    transition: var(--transition);
 }
-
-.show-navbar-collapse {
+.show-navbar-collapse{
     transform: translateX(0);
 }
-
-/* Navbar Items */
-.navbar-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    list-style: none;
-    padding: 0;
+.nav-item{
+    margin-bottom: 1.4rem;
+}
+.nav-link{
+    transition: var(--transition);
+}
+.nav-link:hover{
+    color: var(--purple-color);
 }
 
-.nav-item {
-    margin: 0;
-}
-
-.nav-link {
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #ffffff;
-    text-decoration: none;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-    color: #f4a261;
-}
-
-
-@media screen and (min-width: 768px) {
-    .navbar-collapse {
-        position: static;
-        transform: translateX(0);
-        background-color: transparent;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-end;
-        gap: 2rem;
+@media screen and (min-width: 992px){
+    .navbar-collapse{
+        position: relative;
         height: auto;
         padding: 0;
+        width: 100%;
+        background-color: transparent;
+        transform: translateX(0);
+        justify-content: flex-end;
     }
-    .navbar-toggler-btn img {
-        width: 25px;
-        height: auto;
-    }
-
-    .navbar-toggler-btn {
+    .navbar-toggler-btn{
         display: none;
     }
-
-    .navbar-nav {
-        flex-direction: row;
-        gap: 2rem;
+    .nav-item{
+        margin-bottom: 0;
+        margin-left: 2.8rem;
     }
-
-    .nav-link {
-        font-size: 1.5rem;
-        color: #333;
+    .nav-link{
+        color: var(--black-color);
+        font-size: 1.7rem;
+        font-weight: 500!important;
+        opacity: 0.8;
     }
-
-    .nav-link:hover {
-        color: #000;
+    .navbar-nav{
+        display: flex;
     }
 }
