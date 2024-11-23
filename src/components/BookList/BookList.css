@@ -11,9 +11,11 @@
     background-color: var(--white-color);
     box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 15px 0px;
     transition: var(--transition);
+    height: 100%;
 }
-.book-item:hover{
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+.book-item:hover {
+    box-shadow: rgba(0, 0, 0, 0.519) 0px 8px 20px 0px; /* Stronger hover effect */
+    transform: translateY(-20px); /* Slight hover lift for better interactivity */
 }
 .book-item-img img{
     max-width: 180px;
@@ -38,6 +40,7 @@
     opacity: 0.6;
     font-style: italic;
     font-size: 14px;
+    color: #777;
 }
 /* Pagination Container */
 .pagination {
@@ -46,15 +49,22 @@
     align-items: center;
     margin-top: 30px; /* Add space above the pagination */
   }
-  
-  .pagination .btn {
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* Pagination Button Styles */
+.pagination .btn {
     padding: 12px 20px;
     font-size: 16px;
     font-weight: bold;
     background-color: #007bff;
     color: white;
     border: 2px solid #007bff;
-    border-radius: 5px;
+    border-radius: 50px; /* Fully rounded buttons for a sleek look */
     cursor: pointer;
     transition: background-color 0.3s ease, border-color 0.3s ease;
     margin: 0 10px;
@@ -62,37 +72,41 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .pagination .btn:disabled {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px 0px; /* Shadow for buttons */
+}
+
+/* Disabled Button Styling */
+.pagination .btn:disabled {
     background-color: #cccccc;
     border-color: #cccccc;
     cursor: not-allowed;
-  }
-  
-  .pagination .btn:hover:not(:disabled) {
+}
+
+/* Hover Effect for Pagination Buttons */
+.pagination .btn:hover:not(:disabled) {
     background-color: #0056b3;
     border-color: #0056b3;
-  }
-  
-  .pagination .current-page {
+}
+
+/* Current Page Styling */
+.pagination .current-page {
     font-size: 15px;
-   
     color: #333;
     margin: 0 10px;
     font-weight: bold;
-  }
-  .current-page{
-    width: 20%;
+}
+
+.current-page {
     display: flex;
-    font-weight: 100;
     align-items: center;
     justify-content: center;
-  }
-  
-  .pagination .current-page span {
+}
+
+.pagination .current-page span {
     color: #007bff;
-  }
+    font-weight: bold; /* Highlight current page */
+}
+
   
   
 

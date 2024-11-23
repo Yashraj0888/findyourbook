@@ -1,63 +1,115 @@
-.book-details{
+/* Book Details Styling */
+.book-details {
     padding: 6rem 0;
+    background-color: #f4f4f4; /* Light background for a clean look */
 }
-.back-btn{
+
+/* Back Button Styling */
+.back-btn {
     margin-left: 20px;
     margin-bottom: 2.6rem;
     transition: var(--transition);
+    font-size: 1rem;
+    background-color: #333;
+    font-weight: bold;
+    color: wheat; 
+    width: 25%;/* Dark color for better contrast */
 }
-.back-btn:hover{
-    color: var(--purple-color);
+
+.back-btn:hover {
+    transform: translateY(-10px);
+    color: #bcbfc1; 
 }
-.back-btn span{
+
+.back-btn span {
     margin-left: 1rem;
+    font-weight: normal;
 }
-.book-details-content{
+
+/* Book Details Content Layout */
+.book-details-content {
+    display: grid;
     gap: 4rem;
+    grid-template-columns: 1fr; /* Default to single column for smaller screens */
 }
-.book-details-img{
+
+/* Book Details Image Section */
+.book-details-img {
     max-height: 600px;
     overflow: hidden;
+    border-radius: 12px; /* Soft rounded corners for the image */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 20px 0px; /* Subtle shadow for depth */
 }
-.book-details-img img{
+
+.book-details-img img {
     margin: 0 auto;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 12px; /* Soft rounded corners for the image */
 }
-.book-details-item{
-    margin-bottom: 1.4rem;
-}
-.book-details-item.description{
-    opacity: 0.8;
-}
-.book-details-info{
+
+/* Book Details Information Section */
+.book-details-info {
     overflow-y: scroll;
     max-height: 600px;
-    padding: 1.4rem;
+    padding: 2rem; /* Increased padding for more space */
+    background-color: white; /* White background for the info section */
+    border-radius: 12px; /* Rounded corners for a modern feel */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 20px 0px; /* Soft shadow around info */
 }
-.book-details-info::-webkit-scrollbar{
+
+/* Scrollbar Styling */
+.book-details-info::-webkit-scrollbar {
     width: 8px;
 }
-.book-details-info::-webkit-scrollbar-track{
+
+.book-details-info::-webkit-scrollbar-track {
     border-radius: 8px;
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
 }
-.book-details-info::-webkit-scrollbar-thumb{
-    background-color: var(--purple-color);
+
+.book-details-info::-webkit-scrollbar-thumb {
+    background-color: #333; /* Blue thumb for the scrollbar */
     outline: -1px solid slategray;
     border-radius: 8px;
 }
 
-@media screen and (min-width: 768px){
-    .book-details-content{
-        grid-template-columns: 40% 60%;
-        gap: 0
+/* Item Styling */
+.book-details-item {
+    margin-bottom: 1.6rem;
+    font-size: 1.5rem;
+    color: #555; /* Slightly lighter text color for better readability */
+}
+
+.book-details-item.description {
+    opacity: 0.9;
+    font-style: italic; /* Italicize the description for a more professional look */
+    color: #333; /* Darker color for description text */
+}
+
+/* Media Query for Responsive Design */
+@media screen and (min-width: 768px) {
+    .book-details-content {
+        grid-template-columns: 40% 60%; /* Split into two columns on larger screens */
+        gap: 2rem;
     }
-    .book-details-img{
-        padding: 0 6rem 0 2rem;
+    
+    .book-details-img {
+        padding: 0 6rem 0 2rem; /* Add padding for better spacing on larger screens */
     }
-    .book-details-img img{
-        max-width: 100%;
+    
+    .book-details-img img {
+        max-width: 100%; /* Ensure images fit within the container */
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .book-details-content {
+        gap: 5rem; /* Increase gap on larger screens for more spacious layout */
+    }
+
+    .book-details-info {
+        padding: 2.5rem; /* More padding for info section on large screens */
     }
 }

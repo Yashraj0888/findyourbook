@@ -1,14 +1,75 @@
-.header-content{
-    min-height: 75vh;
-    background: linear-gradient(rgba(141, 39, 174, 0.3), rgba(141, 39, 174, 0.5)), url("../../images/library-img.jpg") center/cover no-repeat;
-    flex-direction: column;
+/* Header content container */
+.header-content {
+  min-height: 75vh;
+  background: linear-gradient(
+    to bottom right,
+    rgba(240, 240, 240, 0.8), /* Soft light beige */
+    rgba(200, 200, 200, 0.6) 50%, /* Subtle warm gray */
+    rgba(180, 150, 120, 0.4) 100% /* Gentle amber tone */
+  ),
+  url("../../images/library-img.jpg") center/cover no-repeat;
+  background-attachment: fixed; /* Adds a parallax scrolling effect */
+  padding: 80px 20px;
+  position: relative;
+  text-align: center;
+  color: #333; /* Darker text for better readability */
+  transition: all 0.3s ease;
+  flex-direction: column; /* Smooth transition for any hover or state changes */
 }
-.header-title{
-    font-size: 4.2rem;
+
+/* Adding an overlay effect to the background */
+.header-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3); /* Slight dark overlay */
+  z-index: -1;
 }
-.header-text{
-    margin-top: -1.8rem;
-    margin-bottom: 2.8rem;
-    opacity: 0.8;
-    max-width: 770px;
+
+/* Styling text or headers inside .header-content */
+.header-content h1,
+.header-content h2 {
+  position: relative;
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a subtle text shadow for better contrast */
+  letter-spacing: 1.5px;
+  word-wrap: break-word; /* Ensures text wraps on smaller screens */
+}
+
+/* Optional: Style any text inside the header */
+.header-content p {
+  position: relative;
+  font-size: 1.5rem;
+  color: #444;
+  max-width: 600px;
+  margin: 10px auto 0; 
+  margin-bottom: 20px; /* Reduced margin-top to decrease the gap */
+  line-height: 1.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header-content {
+    padding: 60px 15px;
+    margin-top: 15%;
+  }
+
+  /* Adjust h1 font size on smaller devices */
+  .header-content h1 {
+    font-size: 2.5rem; /* Slightly smaller heading on mobile */
+  }
+
+  /* Adjust h2 font size on smaller devices */
+  .header-content h2 {
+    font-size: 2rem; /* Make h2 smaller for better readability */
+  }
+
+  /* Adjust paragraph font size for better readability */
+  .header-content p {
+    font-size: 1.4rem; /* Adjust paragraph font size for readability */
+  }
 }

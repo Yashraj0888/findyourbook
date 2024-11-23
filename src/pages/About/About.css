@@ -1,28 +1,99 @@
-.about{
-    padding: 3rem 0;
-}
-.about-content{
-    gap: 4rem;
-}
-.about-title{
-    margin: 1rem 0;
-}
-.about-img img{
-    max-width: 520px;
-}
-.about-text p{
-    margin: 1.8rem 0;
-    opacity: 0.8;
+/* About Section */
+.about {
+    padding: 3rem 1rem; /* Add side padding for smaller screens */
+    background-color: #f9f9f9; /* Neutral background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-@media screen and (min-width: 800px){
-    .about-content{
-        grid-template-columns: repeat(2, 1fr);
+/* About Content Layout */
+.about-content {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+    grid-template-columns: 1fr; /* Default single column layout */
+    width: 100%;
+    max-width: 1200px; /* Center content with maximum width */
+}
+.section-title{
+    font-size: 3rem;
+}
+
+/* About Title */
+.about-title {
+    font-size: 1.8rem; /* Slightly smaller for smaller screens */
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 1rem 0; /* Adjusted for smaller screens */
+    text-align: center; /* Centered for better visual alignment */
+}
+
+/* About Image Styling */
+.about-img img {
+    max-width: 100%; /* Full width for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.about-img:hover img {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+}
+
+
+/* About Text */
+.about-text p {
+    font-size: 1.1rem; /* Slightly smaller for improved readability on small screens */
+    line-height: 1.6;
+    color: #7f8c8d;
+    margin: 1.5rem 0;
+    opacity: 0.9;
+    text-align: justify; /* Improves text flow for all devices */
+}
+
+/* Responsive Design for Larger Devices */
+@media screen and (min-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr 1fr; /* Two-column layout for wider screens */
+        gap: 3rem; /* Balanced spacing */
     }
-    .about-title{
-        margin-top: 0;
+
+    .about-title {
+        font-size: 2rem; /* Larger font size for wider screens */
+        text-align: left; /* Align to the left for a structured look */
     }
-    .about-img img{
-        margin-left: 0;
+
+    .about-img img {
+        max-width: 520px; /* Restrict image width on larger screens */
+    }
+
+    .about-text p {
+        font-size: 1.5rem; /* Larger text for readability on wider screens */
+    }
+}
+
+/* Additional Enhancements */
+@media screen and (min-width: 1200px) {
+    .about {
+        padding: 4rem 2rem; /* Add more padding for spacious designs */
+    }
+
+    .about-content {
+        gap: 4rem; /* Larger gap for premium spacing */
+    }
+
+    .about-title {
+        font-size: 3rem; /* Larger and bolder for desktop viewing */
+    }
+
+    .about-img img {
+        max-width: 600px; /* Scale image appropriately */
+    }
+
+    .about-text p {
+        font-size: 2rem; /* Comfortable font size for larger devices */
     }
 }
